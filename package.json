@@ -27,5 +27,8 @@
     "yarn.lock": [
       "git rm --cached"
     ]
+  },
+  "dependencies": {
+    "lint-staged": "^10.0.7"
   }
 }
