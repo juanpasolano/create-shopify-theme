@@ -1,0 +1,20 @@
+{
+  "name": "create-shopify-theme",
+  "version": "0.0.1",
+  "keywords": [
+    "shopify",
+    "theme"
+  ],
+  "description": "Create A Shopify Theme",
+  "license": "MIT",
+  "engines": {
+    "node": ">=8"
+  },
+  "bin": {
+    "create-react-app": "./index.js"
+  },
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "commander": "^4.1.1"
+  }
+}
