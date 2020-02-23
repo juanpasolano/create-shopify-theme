@@ -1,0 +1,10 @@
+{% comment %}
+  From: https://www.mpz.im/posts/shopify-webpack-codesplit/
+  This snippets helps resolve asset paths to JS chunks
+  So we can async load some modules.
+{% endcomment %}
+{% capture randomFile %}{{ 'randFile.js' | asset_url }}{% endcapture %}
+{% assign assetsPath = randomFile | split: 'randFile.js' | first %}
+<script>
+  window.__webpack_public_path__ = "{{ assetsPath }}";
+</script>

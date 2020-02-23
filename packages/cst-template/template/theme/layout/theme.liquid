@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="{{ shop.locale }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'/>
+    <meta name="theme-color" content="" />
+    <link rel="canonical" href="{{ canonical_url }}" />
+
+    {% if settings.favicon != nil %}
+      <link rel="shortcut icon" type="image/x-icon" href="{{ settings.favicon | img_url: '32x32' }}">
+    {% endif %}
+
+    {%- capture seo_title -%}
+      {{ page_title }}
+      {%- if current_tags -%}
+        {%- assign meta_tags = current_tags | join: ', ' -%} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags }}
+      {%- endif -%}
+      {%- if current_page != 1 -%}
+        &ndash; {{ 'general.meta.page' | t: page: current_page }}
+      {%- endif -%}
+    {%- endcapture -%}
+    <title>{{ seo_title }}</title>
+
+    {%- if page_description -%}
+      <meta name="description" content="{{ page_description | escape }}">
+    {%- endif -%}
+
+    {{ content_for_header }}
+    {{ "main.scss.css" | asset_url | stylesheet_tag }}
+  </head>
+
+  <body class="page page--{{ page_title | handle }} 
+    {%if customer %}page--customer {% endif %}
+    {%if template_name %}page--{{ template_name }} {% endif %}
+    {%if page.handle %}page--{{ page.handle }} {% endif %}"
+    id="{{ page_title | handle }}"
+    datashop="{{ shop.name }}">
+
+
+    {{ content_for_layout }}
+
+    {% include 'asset-path' %}
+    {{ "jquery.min.js" | asset_url | script_tag }}
+    {{ "main.js" | asset_url | script_tag }}
+  </body>
+</html>
