@@ -66,11 +66,10 @@ export const init = async name => {
 
           //Copies the files from the template
           const templatePath = path.join(
-            require.resolve('../../cst-template/package.json', {
+            require.resolve('../template/package.json', {
               paths: [root],
             }),
-            '..',
-            'template'
+            '..'
           );
           fs.copySync(templatePath, root);
         }

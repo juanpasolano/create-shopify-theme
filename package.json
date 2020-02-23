@@ -1,18 +1,38 @@
 {
-  "private": true,
-  "workspaces": [
-    "packages/*"
+  "name": "create-shopify-theme",
+  "version": "0.0.3",
+  "keywords": [
+    "shopify",
+    "theme"
   ],
-  "description": "Scaffolds a Shopify Theme",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "Create A Shopify Theme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/juanpasolano/create-shopify-theme",
+    "directory": "packages/create-shopify-theme"
   },
-  "author": "",
-  "license": "ISC",
+  "license": "MIT",
+  "engines": {
+    "node": ">=8"
+  },
+  "bin": {
+    "@juanpa_solano/create-shopify-theme": "./index.js",
+    "create-shopify-theme": "./index.js"
+  },
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "commander": "^4.1.1",
+    "esm": "^3.2.25",
+    "execa": "^4.0.0",
+    "fs-extra": "^8.1.0",
+    "inquirer": "^7.0.4",
+    "ncp": "^2.0.0",
+    "validate-npm-package-name": "^3.0.0"
+  },
   "devDependencies": {
     "husky": "^4.2.3",
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "lint-staged": "^10.0.7"
   },
   "husky": {
     "hooks": {
@@ -26,8 +46,5 @@
     "yarn.lock": [
       "git rm --cached"
     ]
-  },
-  "dependencies": {
-    "lint-staged": "^10.0.7"
   }
 }
