@@ -1,0 +1,56 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Base Temaplte",
+    "theme_author": "Wondercraft",
+    "theme_version": "1.0.0",
+    "theme_documentation_url": "https://github.com/juanpasolano/create-shopify-theme/tree/master/packages/cst-template",
+    "theme_support_url": "https://github.com/juanpasolano/create-shopify-theme/issues"
+  },
+  {
+    "settings": [
+      {
+        "id": "favicon",
+        "label": "Favicon image",
+        "type": "image_picker",
+        "info": "Will be scaled down to 32 x 32px"
+      }
+    ],
+    "name": "Favicon"
+  },
+  {
+    "name": "Social media",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "share_image",
+        "label": "Image",
+        "info": "Shown when sharing a link on social media. [Learn more](https://help.shopify.com/manual/using-themes/troubleshooting/showing-social-media-thumbnail-images/) about image thumbnails."
+      },
+      {
+        "type": "text",
+        "id": "twitter_link",
+        "label": "Twitter link",
+        "info": "https://twitter.com/shopify"
+      },
+      {
+        "type": "text",
+        "id": "facebook_link",
+        "label": "Facebook link",
+        "info": "https://facebook.com/shopify"
+      },
+      {
+        "type": "text",
+        "id": "pinterest_link",
+        "label": "Pinterest link",
+        "info": "https://pinterest.com/shopify"
+      },
+      {
+        "type": "text",
+        "id": "instagram_link",
+        "label": "Instagram link",
+        "info": "https://instagram.com/shopify"
+      }
+    ]
+  }
+]
