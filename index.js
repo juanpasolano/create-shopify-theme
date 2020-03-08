@@ -18,6 +18,4 @@ if (major < 8) {
   process.exit(1);
 }
 
-console.log('Asdsadasds');
-
 require('./createShopifyTheme');
